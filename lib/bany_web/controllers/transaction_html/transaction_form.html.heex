@@ -1,0 +1,11 @@
+<.simple_form :let={f} for={@changeset} action={@action}>
+  <.error :if={@changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:memo]} type="text" label="Memo" />
+  <.input field={f[:amount]} type="number" label="Amount" step="any" />
+  <.input field={f[:date]} type="datetime-local" label="Date" />
+  <:actions>
+    <.button>Save Transaction</.button>
+  </:actions>
+</.simple_form>

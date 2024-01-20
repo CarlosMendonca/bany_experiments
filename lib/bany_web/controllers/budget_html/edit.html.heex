@@ -1,0 +1,8 @@
+<.header>
+  Edit Budget <%= @budget.id %>
+  <:subtitle>Use this form to manage budget records in your database.</:subtitle>
+</.header>
+
+<.budget_form changeset={@changeset} action={~p"/budgets/#{@budget}"} />
+
+<.back navigate={~p"/budgets"}>Back to budgets</.back>

@@ -5,6 +5,7 @@ defmodule Bany.Budgets.Category do
   schema "categories" do
     field :name, :string
     has_many :transactions, Bany.Ledgers.Transaction
+    many_to_many :budgets, Bany.Budgets.Budget, join_through: "budgets_categories"
 
     timestamps(type: :utc_datetime)
   end

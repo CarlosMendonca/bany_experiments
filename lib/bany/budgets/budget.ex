@@ -4,6 +4,7 @@ defmodule Bany.Budgets.Budget do
 
   schema "budgets" do
     field :name, :string
+    many_to_many :categories, Bany.Budgets.Category, join_through: "budgets_categories"
 
     timestamps(type: :utc_datetime)
   end

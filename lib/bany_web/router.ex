@@ -18,6 +18,9 @@ defmodule BanyWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    resources "/budgets", BudgetController
+    resources "/categories", CategoryController
+    resources "/transactions", TransactionController
   end
 
   # Other scopes may use custom stacks.
